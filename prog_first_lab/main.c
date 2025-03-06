@@ -14,7 +14,7 @@ int main() {
     head->next = NULL;  // Пустой список
 
 
-    printf("en(head) = %d (ожидается 0)\n", len(head));
+    printf("len(head) = %d (ожидается 0)\n", len(head));
 
     printf("Добавляем элементы: 10, 20, 30\n");
     appendItem(head, 10);
