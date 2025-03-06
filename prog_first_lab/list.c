@@ -46,6 +46,7 @@ void appendItem(struct Item* head, int toAppend) {
     }
     pointer -> next = newItem;
     newItem -> next = NULL;
+    return;
 }
 
 
@@ -69,6 +70,7 @@ void deleteItem(struct Item* head, int index) {
 
     prev->next = toDelete->next;
     free(toDelete);
+    return;
 }
 
 void popItem(struct Item* head) {
@@ -158,6 +160,7 @@ void printItems(struct Item* head) {
         printf("%d || ", pointer -> value);
     }
     printf("\n");
+    return;
 }
 struct Item* replace(struct Item* head, int a, int b) {
     if (head == NULL) {
@@ -185,7 +188,6 @@ void appendReverse(struct Item* l1, struct Item* l2) {
     struct Item* current = l2 -> next;
     struct Item* next = NULL;
     struct Item* pointer = l1;
-    //prev - head l2
     while (current != NULL) {
         next = current -> next;
         current -> next = prev;
@@ -196,4 +198,5 @@ void appendReverse(struct Item* l1, struct Item* l2) {
         pointer = pointer -> next;
     }
     pointer -> next = prev;
+    return;
 }
